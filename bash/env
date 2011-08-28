@@ -1,0 +1,11 @@
+export JAVA_HOME=/opt/java/jdk1.5.0_22
+export EDITOR="submlime"
+export PATH=$PATH:~/bin
+export PATH=$PATH:~/bin/code_swarm/bin
+
+# Added by autojump install.sh
+#source /etc/profile.d/autojump.bash
+#export PATH=$PATH:!/bin/autojump/autojump/bin/autojump
+#got this working aug 2 6pm..just point to bin instead of entire folder
+export PATH=$PATH:~/bin/autojump/autojump/bin
+source ~/bin/autojump/autojump/autojump.bash
