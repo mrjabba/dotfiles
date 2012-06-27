@@ -1,24 +1,16 @@
-alias reload="source ~/bin/dotfiles/bash/aliases"
-alias ea="sublime ~/bin/dotfiles/bash/aliases && reload"
+alias reload="source ~/dev/dotfiles/bash/aliases"
+#alias ea="sublime ~/dev/dotfiles/bash/aliases && reload"
 alias h=history
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
 alias lh='ls -laGh'
-alias s=sublime
-alias n=nautilus
-alias not='notify-send "Build done in DIR: $PWD"'
-#alias mvn='~/dev/maven/apache-maven-3.0/bin/mvn'
-#alias roo='~/dev/spring/spring-roo-1.1.0.RELEASE/bin/roo.sh'
-#see https://github.com/xvzf/vcprompt
-alias vcp="vcprompt --format '(%b:%h)'"
 
 #Git
 alias g='git status'
 alias gco='git checkout'
 alias gcb='git checkout -b'
 alias gcm='git checkout master'
-alias gsr='git svn rebase'
 alias grm='git rebase master'
 alias gm='git merge'
 
@@ -38,59 +30,4 @@ function gg() {
 function take {
   mkdir $1
   cd $1
-}
-
-#Work related Java build functions
-
-#bd a function to run an ant target AND be notified about it.
-function bd {
- if [ -z "$1" ]; then
-   ant publish;
-   notify-send "Build done for target (publish) in DIR: $PWD"
- else
-   ant $1 $2;
-   notify-send "Build done for target ($1) in DIR: $PWD"
- fi
-}
-
-# function to run (H config) jboss and be notified about it.
-function jh { 
-    cd /jboss-4.3/bin;
-    ./run.sh -b 0.0.0.0;
-  }    
-
-# function to run (care config) jboss and be notified about it.
-function jc { 
-    cd /jboss-4.3/bin;
-    ./care.sh -b 0.0.0.0;
-  }    
-
-function r-all {
-   cd /branch/Balboa
-   pwd -P
-   echo "Rebasing branch..."
-   ./rebase.sh;
-   notify-send "Done rebasing branch..."
-
-   cd /trunk/Balboa
-   echo "Rebasing trunk..."
-   pwd -P
-   ./rebase.sh;
-
-   notify-send "Done rebasing branch and trunk..."
- }    
-
-function r-br {
-  prevBranch=$(git branch 2>/dev/null|grep -e ^* | tr -d \*)
-
-  echo "checking out master"
-  git checkout master
-  echo "svn rebasing"
-  git svn rebase
-  echo "checking out previous branch:" $prevBranch
-  git checkout $prevBranch
-  echo "rebasing master"
-  git rebase master
-
-  notify-send "Done with master svn rebase and rebase master in branch:"$prevBranch
 }

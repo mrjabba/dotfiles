@@ -1,11 +1,12 @@
-export JAVA_HOME=/opt/java/jdk1.5.0_22
-export EDITOR="submlime"
-export PATH=$PATH:~/bin
-export PATH=$PATH:~/bin/code_swarm/bin
+HISTFILESIZE=2500
+if [ -f `brew --prefix`/etc/autojump ]; then
+  . `brew --prefix`/etc/autojump
+fi
+MYSQL=/usr/local/mysql/bin
+export PATH=$PATH:$MYSQL
+export DYLD_LIBRARY_PATH=/usr/local/mysql/lib:$DYLD_LIBRARY_PATH
 
-# Added by autojump install.sh
-#source /etc/profile.d/autojump.bash
-#export PATH=$PATH:!/bin/autojump/autojump/bin/autojump
-#got this working aug 2 6pm..just point to bin instead of entire folder
-export PATH=$PATH:~/bin/autojump/autojump/bin
-source ~/bin/autojump/autojump/autojump.bash
+export M2_HOME=/usr/local/Cellar/maven2/2.2.1/libexec
+export M2=/usr/local/Cellar/maven2/2.2.1/libexec/bin
+export PATH=$M2:$PATH
+export PATH=$PATH:/usr/local/sbin
