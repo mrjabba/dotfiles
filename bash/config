@@ -39,4 +39,21 @@ BCYAN='\e[46m'
 BWHITE='\e[47m'
 
 #with cool unicode char prompt ctrl + shift + u then 2234 the therefore sign
-PS1="\n\u@\h:\w \[$EBLUE\]\$(vcprompt)\[$NO_COLOR\] \n ∴ "
+#PS1="\n\u@\h:\w \[$EBLUE\]\$(vcprompt)\[$NO_COLOR\] \n ∴ "
+
+#with cool unicode char prompt ctrl + shift + u then 2234 the therefore sign
+#PS1="\n\u@\h:\w \[$EBLUE\]\$(vcprompt)\[$NO_COLOR\] \n ∴ "
+#223E
+PS1="\n\u@\h:\w \[$EBLUE\]\$(vcprompt)\[$NO_COLOR\] \n ∾ "
+#1d11e http://en.wikipedia.org/wiki/List_of_Unicode_characters
+#PS1="\n\u@\h:\w \[$EBLUE\]\$(vcprompt)\[$NO_COLOR\] \n 𝄞 "
+#10308
+#PS1="\n\u@\h:\w \[$EBLUE\]\$(vcprompt)\[$NO_COLOR\] \n 𐌈 "
+#2756
+#PS1="\n\u@\h:\w \[$EBLUE\]\$(vcprompt)\[$NO_COLOR\] \n ❖ "
+#25c9
+#PS1="\n\u@\h:\w \[$EBLUE\]\$(vcprompt)\[$NO_COLOR\] \n ◉ "
+#25a3
+#PS1="\n\u@\h:\w \[$EBLUE\]\$(vcprompt)\[$NO_COLOR\] \n ▣ "
+#PS1="\n\u@\h:\w \[$EBLUE\]\$(vcprompt)\[$NO_COLOR\] \n\[$ECYAN\]𐌈𐌈𐌈𐌈\[$NO_COLOR\] "
+PS1="\n\u@\h:\w \[$EBLUE\]\$(vcprompt)\[$NO_COLOR\] \n\[$ECYAN\]𐌈\[$ERED\]𐌈\[$ECYAN\]𐌈\[$NO_COLOR\] "

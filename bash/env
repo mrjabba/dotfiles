@@ -1,4 +1,6 @@
-HISTFILESIZE=2500
+HISTFILESIZE=250000
+HISTSIZE=100000
+
 if [ -f `brew --prefix`/etc/autojump ]; then
   . `brew --prefix`/etc/autojump
 fi
@@ -6,7 +8,20 @@ MYSQL=/usr/local/mysql/bin
 export PATH=$PATH:$MYSQL
 export DYLD_LIBRARY_PATH=/usr/local/mysql/lib:$DYLD_LIBRARY_PATH
 
-export M2_HOME=/usr/local/Cellar/maven2/2.2.1/libexec
-export M2=/usr/local/Cellar/maven2/2.2.1/libexec/bin
-export PATH=$M2:$PATH
+#mvn 2
+#export M2_HOME=/usr/local/Cellar/maven2/2.2.1/libexec
+#export M2=/usr/local/Cellar/maven2/2.2.1/libexec/bin
+#export PATH=$M2:$PATH
+
 export PATH=$PATH:/usr/local/sbin
+export PATH=/usr/local/bin:$PATH
+#export MAVEN_OPTS='-Xms256m -Xmx1024m -XX:+CMSClassUnloadingEnabled -XX:PermSize=64M -XX:MaxPermSize=128M -Dfile.encoding=UTF-8'
+#export MAVEN_OPTS='-Xms256m -Xmx1224m -XX:+CMSClassUnloadingEnabled -XX:PermSize=64M -XX:MaxPermSize=128M -Dfile.encoding=UTF-8'
+export MAVEN_OPTS='-Xms256m -Xmx1224m -XX:+CMSClassUnloadingEnabled -XX:PermSize=64M -XX:MaxPermSize=256M -Dfile.encoding=UTF-8'
+#export MAVEN_OPTS=" -J-XX:MaxPermSize=256m -J-Xmx2048m"
+
+#export JRUBY_OPTS='--1.9 -Xms256m -Xmx1024m -XX:+CMSClassUnloadingEnabled -XX:PermSize=64M -XX:MaxPermSize=128M -Dfile.encoding=UTF-8'
+
+export EDITOR=vim
+
+

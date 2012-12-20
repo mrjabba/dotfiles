@@ -13,12 +13,23 @@ alias gcb='git checkout -b'
 alias gcm='git checkout master'
 alias grm='git rebase master'
 alias gm='git merge'
+#use macvim for ruby compatibility sep5 2012
+alias vim=/Applications/MacVim.app/Contents/MacOS/Vim
+alias rspecs='want_spring=1 rspec --tag spring'
+#there was already a rs defined in unix..in case you run into issues..
+alias rs='rails server'
+alias rc='rails console'
+alias reverttemplates='git co fixtures/vcr_cassettes/templates.json'
+alias mc='mvn compile'
+alias mcc='mvn clean compile'
+alias ms='sudo mongod run --config /usr/local/etc/mongod.conf'
+
 
 #cool command to show the commands you use the most
 function popular {
   history | awk '{a[$2]++}END{for(i in a){print a[i] " " i}}' | sort -rn | head  
 }
-
+alias supdb='ruby ~/dev/sup_db.rb'
 #Commit pending changes and quote all args as message
 function gg() {
   git commit -v -a -m "$*"
